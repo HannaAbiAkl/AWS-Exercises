@@ -1,7 +1,11 @@
-- Create Amazo Linux instance
-- Configure Security Groups to allow http inbound
-- Launch instance
-- Connect to instance
-- Configure ec2 user prvileges
-- Create sample index.php file in var/www/html
-- Connect to instance public ip from local browser
+//This setup connects to a private VPC subnet through a Bastion and pings Google from the private subnet
+- Create Public and Private VPC
+- Create NAT/Bastion instance in public subnet (Linux)
+- Create instance in private subnet (Ubuntu)
+- Configure Ubuntu route table default route to Bastion instance
+- Configure Bastion security group to allow incoming traffic from private subnet
+- Make sure public and private security groups allow SSH connection
+- Save Bastion security key pair in Pageant (we are using the same pair for the ubuntu private instance in this example)
+- Connect to Bastion instance with Putty and turn on Agent Forwarding in Auth settings
+- From Bastion instance, ssh ubuntu@<Private Ubuntu IP>
+- After successfully connecting to private instance, ping www.google.com
