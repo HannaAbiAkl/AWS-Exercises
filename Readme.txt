@@ -1,5 +1,7 @@
-- Create Instance from Amazon RStudio Ubuntu AMI
-- Edit Security Groups to add http inbound rule
+- Create Amazo Linux instance
+- Configure Security Groups to allow http inbound
 - Launch instance
-- Connect to instance public ip from local browser to reach RStudio
-landing page
+- Connect to instance
+- Configure ec2 user prvileges
+- Create sample index.php file in var/www/html
+- Connect to instance public ip from local browser
